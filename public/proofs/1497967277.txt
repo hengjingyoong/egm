@@ -1,0 +1,62 @@
+14/6	- Design the tests
+15/6	- Done all the test functions in system
+16/6	- Done the messaging function
+17/6	- Documentation
+18/6	- Documentation
+19/6	- Poster Display
+20/6	- Documentation
+21/6	- FYP submission, SQE
+22/6	- SQE
+23/6	- SQE
+24/6	- SQE
+25/6	- SQE
+26/6	- HCI
+27/6	- SQE and FYP hardbound submission, HCI
+28/6	- HCI
+29/6	- HCI
+30/6	- HCI
+
+1/7	- DDAC
+2/7	- DDAC
+3/7	- DDAC
+4/7	- DDAC
+5/7	- DDAC
+6/7	- DDAC
+7/7	- DDAC and HCI submission
+
+
+show valid result when present
+
+
+
+
+
+
+
+
+Primary interest area: Enterprising
+Secondary interest area: Social, Conventional
+
+
+
+$careers_id1 = DB::table('career_interest')->whereIn('interest_id', $interests->pluck('id'))
+            ->havingRaw("COUNT(DISTINCT interest_id) >= 2")
+            ->groupBy('career_id')
+            ->pluck('career_id')
+            ->toArray();
+        $careers_id2 = DB::table('ability_career')->whereIn('ability_id', $abilities->pluck('id'))
+            ->havingRaw("COUNT(DISTINCT ability_id) >= 4")
+            ->groupBy('career_id')
+            ->pluck('career_id')
+            ->toArray();
+        $careers_id3 = DB::table('career_work_value')->whereIn('work_value_id', $abilities->pluck('id'))
+            ->havingRaw("COUNT(DISTINCT work_value_id) = 2")
+            ->groupBy('career_id')
+            ->pluck('career_id')
+            ->toArray();
+
+
+make bold in table content
+
+
+
